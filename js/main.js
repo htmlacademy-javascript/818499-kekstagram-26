@@ -31,14 +31,15 @@ const createObject = () => ({
   url: `photos/${URL.pop()}.jpg`,
   description: getRandomArrayElement(DESCRIPTION),
   likes: getRandomInt(15, 200),
-  comments: [
-    idComment = getRandom(1000),
-    messageComment = getRandomArrayElement(MESSAGE),
-    nameComment = getRandomArrayElement(NAME),
-    avatarComment = `img/avatar-${getRandom(3)}.svg`,
-  ]
+  comments:{
+    id: getRandom(1000),
+    message: getRandomArrayElement(MESSAGE),
+    name: getRandomArrayElement(NAME),
+    avatar: `img/avatar-${getRandom(3)}.svg`,
+  }
 });
 
 const photos = Array.from({length: 25}, createObject);
 console.log(photos);
-createObject();
+photos;
+
