@@ -25,4 +25,7 @@ const createObject = () => ({
   ]
 });
 
+const photos = () => Array.from({length: 25}, createObject);
+
+export {photos};
 export {createObject};
