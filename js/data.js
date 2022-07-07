@@ -4,7 +4,7 @@ import { getRandom } from './util.js';
 
 const ID = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25'];
 const DESCRIPTION = ['Вид на пляж', 'Указатель', 'Машина в городе', 'Краб', 'Пальмы вечером'];
-const MESSAGE = ['Всё отлично!', 'В целом всё неплохо. Но не всё.'];
+const MESSAGE = ['Всё отлично!', 'В целом всё неплохо. Но не всё.', 'В целом всё неплохо. Но не всё.', 'В целом всё неплохо. Но не всё.', 'В целом всё неплохо. Но не всё.', 'В целом всё неплохо. Но не всё.'];
 const NAME = ['Иван', 'Петр', 'Алексанр', 'Елена', 'Мария', 'Олег'];
 const URL = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25'];
 
@@ -15,7 +15,7 @@ const createObject = () => ({
   url: `photos/${URL.pop()}.jpg`,
   description: getRandomArrayElement(DESCRIPTION),
   likes: getRandomInt(15, 200),
-  comments:[
+  comments: [
     {
       id: getRandom(1000),
       message: getRandomArrayElement(MESSAGE),
@@ -25,7 +25,7 @@ const createObject = () => ({
   ]
 });
 
-const photos = () => Array.from({length: 25}, createObject);
+const getPhotos = () => Array.from({length: 25}, createObject);
 
-export {photos};
+export {getPhotos};
 export {createObject};
